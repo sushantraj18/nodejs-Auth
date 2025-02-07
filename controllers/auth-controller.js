@@ -58,7 +58,7 @@ const loginUser = async (req,res)=>{
         const accessToken = jwt.sign({
             userId : checkUser._id, 
             userName : checkUser.userName
-            ,role:checkUser.role},process.env.JWT_SECRET_KEY,{expiresIn:"15m"})
+            ,role:checkUser.role},process.env.JWT_SECRET_KEY,{expiresIn:"30m"})
 
 
             return res.status(200).json({success : true,message : "logged in succcessful",accessToken})
